@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="plant_avatar">Plant Avatar</string>
+    <string name="plantName">Planty McPlantface</string>
+    <string name="plantLevel">Level. 0</string>
+    <string name="statHeader">Statistics</string>
+    <string name="statSunHeader">Sun</string>
+    <string name="statWaterHeader">Water</string>
+    <string name="statLoveHeader">Love</string>
+    <string name="statSunValCur">0</string>
+    <string name="statSunValMax">0</string>
+    <string name="statWaterValCur">0</string>
+    <string name="statWaterValMax">0</string>
+    <string name="statLoveValCur">0</string>
+    <string name="statLoveValMax">0</string>
+    <string name="btnSun">Press for Sunshine</string>
+    <string name="btnWater">Press for Water</string>
+    <string name="btnLove">Press for Love</string>
+    <string name="divider">/</string>
+    <string name="button_evolve">Evolve!</string>
+</resources>

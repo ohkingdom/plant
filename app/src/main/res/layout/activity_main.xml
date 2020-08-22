@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/statLoveValCur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/statLoveValCur"
+        app:layout_constraintEnd_toStartOf="@+id/dividerLove"
+        app:layout_constraintTop_toBottomOf="@+id/statWaterValCur" />
+
+    <TextView
+        android:id="@+id/dividerLove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerWater" />
+
+    <TextView
+        android:id="@+id/dividerWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerSun" />
+
+    <ImageView
+        android:id="@+id/plantAvatar"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/plant_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plantName"
+        app:srcCompat="@drawable/avatar_temp"
+        tools:srcCompat="@drawable/avatar_temp" />
+
+    <TextView
+        android:id="@+id/plantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/plantName"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Planty McPlantface" />
+
+    <TextView
+        android:id="@+id/statHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/statHeader"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plantLevel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/statSunHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/statSunHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statHeader" />
+
+    <TextView
+        android:id="@+id/statWaterHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/statWaterHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statSunHeader" />
+
+    <TextView
+        android:id="@+id/statLoveHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/statLoveHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statWaterHeader" />
+
+    <ProgressBar
+        android:id="@+id/progSun"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="5"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="@+id/plantAvatar"
+        app:layout_constraintStart_toStartOf="@+id/plantAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/statHeader" />
+
+    <ProgressBar
+        android:id="@+id/progWater"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="5"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="@+id/progSun"
+        app:layout_constraintStart_toStartOf="@+id/progSun"
+        app:layout_constraintTop_toBottomOf="@+id/statSunHeader" />
+
+    <ProgressBar
+        android:id="@+id/progLove"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="5"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="@+id/progWater"
+        app:layout_constraintStart_toStartOf="@+id/progWater"
+        app:layout_constraintTop_toBottomOf="@+id/statWaterHeader" />
+
+    <TextView
+        android:id="@+id/statSunValMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/statSunValMax"
+        app:layout_constraintStart_toEndOf="@+id/dividerSun"
+        app:layout_constraintTop_toBottomOf="@+id/statHeader" />
+
+    <TextView
+        android:id="@+id/statWaterValMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/statWaterValMax"
+        app:layout_constraintStart_toEndOf="@+id/dividerWater"
+        app:layout_constraintTop_toBottomOf="@+id/statSunValMax" />
+
+    <TextView
+        android:id="@+id/statLoveValMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/statWaterValMax"
+        app:layout_constraintStart_toEndOf="@+id/dividerLove"
+        app:layout_constraintTop_toBottomOf="@+id/statWaterValMax" />
+
+    <TextView
+        android:id="@+id/statSunValCur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/statSunValCur"
+        app:layout_constraintEnd_toStartOf="@+id/dividerSun"
+        app:layout_constraintTop_toBottomOf="@+id/statHeader" />
+
+    <TextView
+        android:id="@+id/statWaterValCur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/statWaterValCur"
+        app:layout_constraintEnd_toStartOf="@+id/dividerWater"
+        app:layout_constraintTop_toBottomOf="@+id/statSunValCur" />
+
+    <Button
+        android:id="@+id/btnSun"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#FFC107"
+        android:text="@string/btnSun"
+        app:layout_constraintBottom_toTopOf="@+id/btnWater"
+        app:layout_constraintEnd_toEndOf="@+id/btnWater"
+        app:layout_constraintStart_toStartOf="@+id/btnWater" />
+
+    <TextView
+        android:id="@+id/dividerSun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statHeader" />
+
+    <Button
+        android:id="@+id/btnWater"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#2196F3"
+        android:text="@string/btnWater"
+        app:layout_constraintBottom_toTopOf="@+id/btnLove"
+        app:layout_constraintEnd_toEndOf="@+id/btnLove"
+        app:layout_constraintStart_toStartOf="@+id/btnLove" />
+
+    <Button
+        android:id="@+id/btnLove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#E91E63"
+        android:text="@string/btnLove"
+        app:layout_constraintBottom_toTopOf="@+id/btnEvolve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnEvolve"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:background="#00000000"
+        android:contentDescription="@string/button_evolve"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_evolve_foreground"
+        android:tint="#009688"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/ic_evolve_foreground"
+        tools:srcCompat="@drawable/ic_evolve_foreground" />
+
+    <TextView
+        android:id="@+id/plantLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/plantLevel"
+        app:layout_constraintEnd_toEndOf="@+id/plantAvatar"
+        app:layout_constraintStart_toStartOf="@+id/plantAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/plantAvatar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
