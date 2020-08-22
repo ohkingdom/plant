@@ -2,6 +2,7 @@ package com.popbeans.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,31 +15,27 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private Plant plant;
-    private TextView plantName;
     private ImageView plantAvatar;
     private TextView plantLevel;
 
     private TextView statSunValCur;
     private TextView statSunValMax;
     private ProgressBar progSun;
-    private Button btnSun;
 
     private TextView statWaterValCur;
     private TextView statWaterValMax;
     private ProgressBar progWater;
-    private Button btnWater;
 
     private TextView statLoveValCur;
     private TextView statLoveValMax;
     private ProgressBar progLove;
-    private Button btnLove;
-
-    private ImageButton btnEvolve;
 
     // Call to redraw UI elements
 
+    @SuppressLint("SetTextI18n")
     public void drawDetails() {
-        // Draw Details
+
+        // Draw Avatar and Details
         if (plant.getPlantLevel() == 1) {
             plantAvatar.setImageResource(R.drawable.avatar_1);
         }
@@ -49,9 +46,10 @@ public class MainActivity extends AppCompatActivity {
             plantAvatar.setImageResource(R.drawable.avatar_3);
         }
 
-        plantLevel.setText("Level. " + Integer.toString(plant.getPlantLevel()));
+        plantLevel.setText("Level. " + plant.getPlantLevel());
     }
 
+    @SuppressLint("SetTextI18n")
     public void drawStatistics() {
 
         // Draw Statistic Values
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         plant = new Plant();
-        plantName = (TextView) findViewById(R.id.plantName);
+        TextView plantName = (TextView) findViewById(R.id.plantName);
         plantName.setText(plant.getPlantName());
         plantAvatar = (ImageView) findViewById(R.id.plantAvatar);
         plantLevel = (TextView) findViewById(R.id.plantLevel);
@@ -93,10 +91,10 @@ public class MainActivity extends AppCompatActivity {
         progWater = (ProgressBar) findViewById(R.id.progWater);
         progLove = (ProgressBar) findViewById(R.id.progLove);
 
-        btnSun = (Button) findViewById(R.id.btnSun);
-        btnWater = (Button) findViewById(R.id.btnWater);
-        btnLove = (Button) findViewById(R.id.btnLove);
-        btnEvolve = (ImageButton) findViewById(R.id.btnEvolve);
+        Button btnSun = (Button) findViewById(R.id.btnSun);
+        Button btnWater = (Button) findViewById(R.id.btnWater);
+        Button btnLove = (Button) findViewById(R.id.btnLove);
+        ImageButton btnEvolve = (ImageButton) findViewById(R.id.btnEvolve);
 
         drawDetails();
         drawStatistics();
@@ -134,12 +132,17 @@ public class MainActivity extends AppCompatActivity {
         btnEvolve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String toastMessage;
                 if (plant.evolve()) {
                     drawDetails();
                     drawStatistics();
-                    Toast toast = Toast.makeText(getApplicationContext(), "Evolution Successful!", Toast.LENGTH_LONG);
-                    toast.show();
+                    toastMessage = "Evolution Successful!";
+
+                } else {
+                    toastMessage = "Evolution Failed!";
                 }
+                Toast toast = Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_LONG);
+                toast.show();
             }
         });
 

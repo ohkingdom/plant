@@ -72,7 +72,7 @@ public class Plant {
     }
 
     public boolean evolve() {
-        if ((check("sun")) && (check("water")) && check("love")) {
+        if ((check("sun")) && (check("water")) && check("love") && (plantLevel < 4)) {
             plantLevel++;
             incMax();
             return true;

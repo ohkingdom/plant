@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">PokéPlant</string>
     <string name="plant_avatar">Plant Avatar</string>
     <string name="plantName">Planty McPlantface</string>
     <string name="plantLevel">Level. 0</string>
