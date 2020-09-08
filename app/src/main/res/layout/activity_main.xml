@@ -37,24 +37,24 @@
         app:layout_constraintTop_toBottomOf="@+id/dividerSun" />
 
     <ImageView
-        android:id="@+id/plantAvatar"
+        android:id="@+id/pokemonAvatar"
         android:layout_width="144dp"
         android:layout_height="144dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="@string/plant_avatar"
+        android:contentDescription="@string/pokemon_Avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plantName"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonName"
         app:srcCompat="@drawable/avatar_temp"
         tools:srcCompat="@drawable/avatar_temp" />
 
     <TextView
-        android:id="@+id/plantName"
+        android:id="@+id/pokemonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/plantName"
+        android:text="@string/pokemon_Name"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,12 +69,8 @@
         android:layout_marginTop="8dp"
         android:text="@string/statHeader"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plantLevel"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/pokemonLevel" />
 
     <TextView
         android:id="@+id/statSunHeader"
@@ -107,39 +103,39 @@
         app:layout_constraintTop_toBottomOf="@+id/statWaterHeader" />
 
     <ProgressBar
-        android:id="@+id/progSun"
+        android:id="@+id/progressBarSun"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:max="5"
         android:progress="0"
-        app:layout_constraintEnd_toEndOf="@+id/plantAvatar"
-        app:layout_constraintStart_toStartOf="@+id/plantAvatar"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonAvatar"
+        app:layout_constraintStart_toStartOf="@+id/pokemonAvatar"
         app:layout_constraintTop_toBottomOf="@+id/statHeader" />
 
     <ProgressBar
-        android:id="@+id/progWater"
+        android:id="@+id/progressBarWater"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:max="5"
         android:progress="0"
-        app:layout_constraintEnd_toEndOf="@+id/progSun"
-        app:layout_constraintStart_toStartOf="@+id/progSun"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarSun"
+        app:layout_constraintStart_toStartOf="@+id/progressBarSun"
         app:layout_constraintTop_toBottomOf="@+id/statSunHeader" />
 
     <ProgressBar
-        android:id="@+id/progLove"
+        android:id="@+id/progressBarLove"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:max="5"
         android:progress="0"
-        app:layout_constraintEnd_toEndOf="@+id/progWater"
-        app:layout_constraintStart_toStartOf="@+id/progWater"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarWater"
+        app:layout_constraintStart_toStartOf="@+id/progressBarWater"
         app:layout_constraintTop_toBottomOf="@+id/statWaterHeader" />
 
     <TextView
@@ -198,6 +194,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:backgroundTint="#FFC107"
+        android:contentDescription="@string/sunbutton"
         android:text="@string/btnSun"
         app:layout_constraintBottom_toTopOf="@+id/btnWater"
         app:layout_constraintEnd_toEndOf="@+id/btnWater"
@@ -219,6 +216,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:backgroundTint="#2196F3"
+        android:contentDescription="@string/waterbutton"
         android:text="@string/btnWater"
         app:layout_constraintBottom_toTopOf="@+id/btnLove"
         app:layout_constraintEnd_toEndOf="@+id/btnLove"
@@ -232,6 +230,7 @@
         android:layout_marginEnd="96dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#E91E63"
+        android:contentDescription="@string/lovebutton"
         android:text="@string/btnLove"
         app:layout_constraintBottom_toTopOf="@+id/btnEvolve"
         app:layout_constraintEnd_toEndOf="parent"
@@ -255,13 +254,13 @@
         tools:srcCompat="@drawable/ic_evolve_foreground" />
 
     <TextView
-        android:id="@+id/plantLevel"
+        android:id="@+id/pokemonLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/plantLevel"
-        app:layout_constraintEnd_toEndOf="@+id/plantAvatar"
-        app:layout_constraintStart_toStartOf="@+id/plantAvatar"
-        app:layout_constraintTop_toBottomOf="@+id/plantAvatar" />
+        android:text="@string/pokemon_Level"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonAvatar"
+        app:layout_constraintStart_toStartOf="@+id/pokemonAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonAvatar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.popbeans.myapplication;
+package com.popbeans.plant;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.popbeans.myapplication", appContext.getPackageName());
+        assertEquals("com.popbeans.plant", appContext.getPackageName());
     }
 }
