@@ -1,11 +1,7 @@
-# plant
+# PokéSolve
 
 Practicing Android app development and testing!
 
-The plant name and starting statistics are randomly generated.
-
-Press the corresponding buttons to increase the necessary stats, and then attempt to evolve the plant to its next level!
-
-(It's currently just a fancy button counter with some logic)
+Choose your starter Pokémon, give it a name, and then solve increasingly difficult math problems in order to evolve it!
 
 ![Application image](image.png)
