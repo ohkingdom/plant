@@ -30,8 +30,10 @@
     <string name="grass_button">Grass Button</string>
     <string name="water_button">Water Button</string>
     <string name="nameModalHeader">Name your Pokémon</string>
+    <string name="mathModalHeader">Math Question</string>
     <string name="solve">Solve</string>
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
     <string name="nameSuggestion"></string>
+    <string name="equationHeader">Solve the following equation</string>
 </resources>

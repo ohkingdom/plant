@@ -2,11 +2,13 @@ package com.popbeans.plant;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView pokemonSprite;
     int avatarDraw = R.drawable.spr_5b_151;
     private TextView pokemonLevel;
+    private String activeButtonContext;
 
     private MathGame game;
 
@@ -111,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -129,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
         pokemonLevel = findViewById(R.id.pokemonLevel);
 
         game = new MathGame();
+        game.setDifficulty(1);
 
         statSunValCur = findViewById(R.id.statSunValCur);
         statSunValMax = findViewById(R.id.statSunValMax);
@@ -152,30 +156,24 @@ public class MainActivity extends AppCompatActivity {
         btnSun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!(pokemon.getValCur("sun") == pokemon.getValMax("sun"))) {
-                    pokemon.incVal("sun");
-                    drawStatistics();
-                }
+                activeButtonContext = "sun";
+                mathDialog(savedInstanceState).show();
             }
         });
 
         btnWater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!(pokemon.getValCur("water") == pokemon.getValMax("water"))) {
-                    pokemon.incVal("water");
-                    drawStatistics();
-                }
+                activeButtonContext = "water";
+                mathDialog(savedInstanceState).show();
             }
         });
 
         btnLove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!(pokemon.getValCur("love") == pokemon.getValMax("love"))) {
-                    pokemon.incVal("love");
-                    drawStatistics();
-                }
+                activeButtonContext = "love";
+                mathDialog(savedInstanceState).show();
             }
         });
 
@@ -199,23 +197,45 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void mathPopup() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setTitle("Solve for X!").setMessage("Haha, content.");
-        builder.setPositiveButton(R.string.solve, new DialogInterface.OnClickListener() {
+    public Dialog mathDialog(Bundle savedInstanceState) {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = (inflater.inflate(R.layout.math_dialog, null));
+        builder.setView(dialogView);
+        builder.setTitle(R.string.mathModalHeader);
+        TextView constantTextView = (TextView) dialogView.findViewById(R.id.constantTextView);
+        constantTextView.setText(game.getConstant());
+        TextView operatorTextView = (TextView) dialogView.findViewById(R.id.operatorTextView);
+        operatorTextView.setText(game.getOperator());
+        TextView sumTextView = (TextView) dialogView.findViewById(R.id.sumTextView);
+        sumTextView.setText(game.getSum());
+        final EditText variableEditText = (EditText) dialogView.findViewById(R.id.variableEditText);
+        builder.setPositiveButton(R.string.submit, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+                try {
+                    if (game.answer(Integer.parseInt(variableEditText.getText().toString()))) {
+                        if (!(pokemon.getValCur(activeButtonContext) == pokemon.getValMax(activeButtonContext))) {
+                            pokemon.incVal(activeButtonContext);
+                            drawStatistics();
+                            Toast toast = Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_LONG);
+                            toast.show();
+                        }
+                    } else {
+                        Toast toast = Toast.makeText(getApplicationContext(), "Incorrect, try again!", Toast.LENGTH_LONG);
+                        toast.show();
+                    }
+                } catch (Exception e) {
+                    System.out.println("Error!");
+                }
             }
         });
         builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
             }
         });
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        return builder.create();
     }
 
 }

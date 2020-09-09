@@ -61,7 +61,7 @@ public class Pokemon {
     private void statGenerator() {
         for (int i = 0; i < stats.size(); i++) {
             statValCur.put(stats.get(i), new Random().nextInt(2));
-            statValMax.put(stats.get(i), 2 + 1);
+            statValMax.put(stats.get(i), 1 + 1);
         }
     }
 
@@ -76,7 +76,7 @@ public class Pokemon {
     private void incMax() {
         try {
             for (int i = 0; i < stats.size(); i++) {
-                statValMax.put(stats.get(i), statValMax.get(stats.get(i)) + new Random().nextInt(2) + 2);
+                statValMax.put(stats.get(i), statValMax.get(stats.get(i)) + new Random().nextInt(2) + 1);
             }
         } catch (Exception e) {
             throw new NullPointerException("Error: Invalid key reference");

@@ -24,8 +24,8 @@ public class MathGame {
 
     public void request() {
         // Generate Random Values
-        constant = new Random().nextInt(100 + 1);
-        variable = new Random().nextInt(100 + 1);
+        constant = new Random().nextInt(50 + 1);
+        variable = new Random().nextInt(50 + 1);
         // Use Difficulty to Select Equation Difficulty
         int i = new Random().nextInt(2);
         if (difficulty == 2) {
@@ -57,6 +57,18 @@ public class MathGame {
             return true;
         }
         return false;
+    }
+
+    public String getConstant() {
+        return String.valueOf(constant);
+    }
+
+    public String getOperator() {
+        return operator;
+    }
+
+    public String getSum() {
+        return String.valueOf(sum);
     }
 
     @Override
