@@ -12,6 +12,6 @@ Choose your starter Pokémon, give it a name, and then solve increasingly diffic
 - [ ] Implement polymorphism (removing a large number of switch statements), generify classes and refactor methods
 - [ ] Add multiplication and division math challenges (will have to change from int to handle this)
 
-![Application image](showcase_1.png)
-![Application image](showcase_4.png)
-![Application image](showcase_5.png)
+![Application image](screenshot_1.png)
+![Application image](screenshot_2.png)
+![Application image](screenshot_3.png)
