@@ -8,6 +8,8 @@ import java.util.Random;
 
 public class Pokemon {
 
+    private boolean testMode = false;
+
     private String pokemonName;
     private List<String> pokemonRealName;
     private Integer pokemonLevel;
@@ -59,9 +61,17 @@ public class Pokemon {
     }
 
     private void statGenerator() {
-        for (int i = 0; i < stats.size(); i++) {
-            statValCur.put(stats.get(i), new Random().nextInt(2));
-            statValMax.put(stats.get(i), 1 + 1);
+        if (!testMode) {
+            for (int i = 0; i < stats.size(); i++) {
+                statValCur.put(stats.get(i), new Random().nextInt(2));
+                statValMax.put(stats.get(i), 1 + 1);
+            }
+        } else {
+            for (int i = 0; i < stats.size(); i++) {
+                statValCur.put(stats.get(i), 2);
+                statValMax.put(stats.get(i), 2);
+            }
+            statValCur.put(stats.get(0), 1);
         }
     }
 
