@@ -218,11 +218,11 @@ public class MainActivity extends AppCompatActivity {
                         if (!(pokemon.getValCur(activeButtonContext) == pokemon.getValMax(activeButtonContext))) {
                             pokemon.incVal(activeButtonContext);
                             drawStatistics();
-                            Toast toast = Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_LONG);
+                            Toast toast = Toast.makeText(getApplicationContext(), "Correct!", Toast.LENGTH_SHORT);
                             toast.show();
                         }
                     } else {
-                        Toast toast = Toast.makeText(getApplicationContext(), "Incorrect, try again!", Toast.LENGTH_LONG);
+                        Toast toast = Toast.makeText(getApplicationContext(), "Incorrect, try again!", Toast.LENGTH_SHORT);
                         toast.show();
                     }
                 } catch (Exception e) {
