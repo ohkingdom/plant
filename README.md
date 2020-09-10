@@ -8,7 +8,7 @@ Choose your starter Pokémon, give it a name, and then solve increasingly diffic
 
 <h2>To-do</h2>
 
-- [x] Refactor TextView, Button, and ImageButton IDs
+- [x] Refactor all View IDs
 - [ ] Implement polymorphism (removing a large number of switch statements), generify classes and refactor methods
 - [ ] Add multiplication and division math challenges (will have to change from int to handle this)
 
