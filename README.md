@@ -10,7 +10,7 @@ Choose your starter Pokémon, give it a name, and then solve increasingly diffic
 
 - [x] Refactor TextView, Button, and ImageButton IDs
 - [ ] Implement polymorphism (removing a large number of switch statements), generify classes and refactor methods
-- [ ] Add division math challenges (will have to change from int to handle this)
+- [ ] Add multiplication and division math challenges (will have to change from int to handle this)
 
 ![Application image](showcase_1.png)
 ![Application image](showcase_4.png)
