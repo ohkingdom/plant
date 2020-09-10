@@ -4,6 +4,14 @@ Practicing Android app development and testing!
 
 Choose your starter Pokémon, give it a name, and then solve increasingly difficult math problems in order to evolve it!
 
-Once I've completed the MathGame class and tested it, I'll heavily refactor the code and implement polymorphism to clean up a number of methods.
+<h2>To-do</h2>
 
-![Application image](img.png)
+- [ ] Refactor TextView, Button, and ImageButton IDs
+- [ ] Implement polymorphisms, generify classes and refactor methods
+- [ ] Add division math challenges (will have to change from int to handle this)
+
+![Application image](showcase_1.png)
+![Application image](showcase_2.png)
+![Application image](showcase_3.png)
+![Application image](showcase_4.png)
+![Application image](showcase_5.png)
