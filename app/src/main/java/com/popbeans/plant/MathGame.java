@@ -28,7 +28,7 @@ public class MathGame {
         variable = new Random().nextInt(50 + 1);
         // Use Difficulty to Select Equation Difficulty
         int i = new Random().nextInt(2);
-        if (difficulty == 2) {
+        if (difficulty > 1) {
             i = new Random().nextInt(2 + 2);
         }
         switch (i) {
@@ -45,8 +45,8 @@ public class MathGame {
                 sum = constant * variable;
                 break;
             case 3:
-                operator = "/";
-                sum = constant / variable;
+                operator = "x";
+                sum = (constant + 25) * (variable + 25);
                 break;
         }
     }

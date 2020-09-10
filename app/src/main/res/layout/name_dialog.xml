@@ -6,13 +6,15 @@
 
     <EditText
         android:id="@+id/nameField"
-        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:hint="@string/nameSuggestion"
+        android:hint="@string/field_name_modal_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLength="12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

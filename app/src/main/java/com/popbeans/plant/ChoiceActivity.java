@@ -56,9 +56,9 @@ public class ChoiceActivity extends AppCompatActivity {
         LayoutInflater inflater = this.getLayoutInflater();
         View dialogView = (inflater.inflate(R.layout.name_dialog, null));
         builder.setView(dialogView);
-        builder.setTitle(R.string.nameModalHeader);
+        builder.setTitle(R.string.header_name_modal_text);
         final EditText nameInput = (EditText) dialogView.findViewById(R.id.nameField);
-        builder.setPositiveButton(R.string.submit, new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.button_submit_text, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent intent = new Intent(ChoiceActivity.this, MainActivity.class);
@@ -67,7 +67,7 @@ public class ChoiceActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(R.string.button_cancel_text, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
             }

@@ -1,39 +1,57 @@
 <resources>
+    <!--    Application Level-->
     <string name="app_name">PokéSolve</string>
-    <string name="pokemon_Avatar">Pokémon Avatar</string>
-    <string name="pokemon_Name">Planty McPlantface</string>
-    <string name="pokemon_Level">Level. 0</string>
-    <string name="statHeader">Statistics</string>
-    <string name="statSunHeader">Sun</string>
-    <string name="statWaterHeader">Water</string>
-    <string name="statLoveHeader">Love</string>
-    <string name="statSunValCur">0</string>
-    <string name="statSunValMax">0</string>
-    <string name="statWaterValCur">0</string>
-    <string name="statWaterValMax">0</string>
-    <string name="statLoveValCur">0</string>
-    <string name="statLoveValMax">0</string>
-    <string name="btnSun">Press for Sunshine</string>
-    <string name="btnWater">Press for Water</string>
-    <string name="btnLove">Press for Love</string>
-    <string name="divider">/</string>
-    <string name="button_evolve">Evolve!</string>
-    <string name="sunbutton">SunButton</string>
-    <string name="waterbutton">WaterButton</string>
-    <string name="lovebutton">LoveButton</string>
-    <string name="title_activity_choice">ChoiceActivity</string>
-    <string name="header">Choose Your Pokémon</string>
-    <string name="fire_type">Fire Type</string>
-    <string name="grass_type">Grass Type</string>
-    <string name="water_type">Water Type</string>
-    <string name="fire_button">Fire Button</string>
-    <string name="grass_button">Grass Button</string>
-    <string name="water_button">Water Button</string>
-    <string name="nameModalHeader">Name your Pokémon</string>
-    <string name="mathModalHeader">Math Question</string>
-    <string name="solve">Solve</string>
-    <string name="submit">Submit</string>
-    <string name="cancel">Cancel</string>
-    <string name="nameSuggestion"></string>
-    <string name="equationHeader">Solve the following equation</string>
+
+    <!--    Choice Activity-->
+    <string name="header_choice_activity_text">Choose Your Pokémon</string>
+    <string name="button_select_fire_text">Fire Type</string>
+    <string name="button_select_grass_text">Grass Type</string>
+    <string name="button_select_water_text">Water Type</string>
+    <string name="button_select_fire_desc">FireButton</string>
+    <string name="button_select_grass_desc">GrassButton</string>
+    <string name="button_select_water_desc">WaterButton</string>
+    <!--    > Name Modal Dialog-->
+    <string name="header_name_modal_text">Name your Pokémon</string>
+    <string name="field_name_modal_hint">Leave blank for default</string>
+    <string name="button_submit_text">Submit</string>
+    <string name="button_submit_desc">SubmitButton</string>
+
+    <!--    Main Activity-->
+    <string name="pokemon_name_text">Pusheen</string>
+    <string name="pokemon_sprite_desc">Pokémon Sprite</string>
+    <string name="pokemon_level_text">Level. 0</string>
+    <string name="value_header_text">Statistics</string>
+    <string name="value_sun_header_text">Sun</string>
+    <string name="value_water_header_text">Water</string>
+    <string name="value_love_header_text">Love</string>
+    <string name="value_divider_text">/</string>
+    <string name="value_sun_current_text">0</string>
+    <string name="value_sun_max_text">0</string>
+    <string name="value_water_current_text">0</string>
+    <string name="value_water_max_text">0</string>
+    <string name="value_love_current_text">0</string>
+    <string name="value_love_max_text">0</string>
+    <string name="button_sun_text">Press for Sunshine</string>
+    <string name="button_water_text">Press for Water</string>
+    <string name="button_love_text">Press for Love</string>
+    <string name="button_evolve_desc">EvolveButton</string>
+    <string name="button_sun_desc">SunButton</string>
+    <string name="button_water_desc">WaterButton</string>
+    <string name="button_love_desc">LoveButton</string>
+
+    <!--    > Math Modal Dialog-->
+    <string name="header_math_modal_text">Math Question</string>
+    <string name="button_solve_text">Solve</string>
+    <string name="button_cancel_text">Cancel</string>
+    <string name="value_math_modal_text">Solve the following equation</string>
+    <string name="value_constant_text">50</string>
+    <string name="value_operator_text">+</string>
+    <string name="value_variable_hint">\u003F</string>
+    <string name="value_equality_text">=</string>
+    <string name="value_sum_text">100</string>
+    <string name="value_constant_desc">ConstantField</string>
+    <string name="value_operator_desc">OperatorField</string>
+    <string name="value_variable_desc">VariableField</string>
+    <string name="value_equality_desc">EqualityField</string>
+    <string name="value_sum_desc">SumField</string>
 </resources>

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/statLoveValCur"
+        android:text="@string/value_love_current_text"
         app:layout_constraintEnd_toStartOf="@+id/dividerLove"
         app:layout_constraintTop_toBottomOf="@+id/statWaterValCur" />
 
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/divider"
+        android:text="@string/value_divider_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dividerWater" />
 
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/divider"
+        android:text="@string/value_divider_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dividerSun" />
 
@@ -41,7 +41,7 @@
         android:layout_width="144dp"
         android:layout_height="144dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="@string/pokemon_Avatar"
+        android:contentDescription="@string/pokemon_sprite_desc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,12 +54,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/pokemon_Name"
+        android:text="@string/pokemon_name_text"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Planty McPlantface" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/statHeader"
@@ -67,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/statHeader"
+        android:text="@string/value_header_text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pokemonLevel" />
@@ -78,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/statSunHeader"
+        android:text="@string/value_sun_header_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statHeader" />
 
@@ -88,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/statWaterHeader"
+        android:text="@string/value_water_header_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statSunHeader" />
 
@@ -98,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/statLoveHeader"
+        android:text="@string/value_love_header_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statWaterHeader" />
 
@@ -144,7 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/statSunValMax"
+        android:text="@string/value_sun_max_text"
         app:layout_constraintStart_toEndOf="@+id/dividerSun"
         app:layout_constraintTop_toBottomOf="@+id/statHeader" />
 
@@ -154,7 +153,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/statWaterValMax"
+        android:text="@string/value_water_max_text"
         app:layout_constraintStart_toEndOf="@+id/dividerWater"
         app:layout_constraintTop_toBottomOf="@+id/statSunValMax" />
 
@@ -164,7 +163,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/statWaterValMax"
+        android:text="@string/value_love_max_text"
         app:layout_constraintStart_toEndOf="@+id/dividerLove"
         app:layout_constraintTop_toBottomOf="@+id/statWaterValMax" />
 
@@ -174,7 +173,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/statSunValCur"
+        android:text="@string/value_sun_current_text"
         app:layout_constraintEnd_toStartOf="@+id/dividerSun"
         app:layout_constraintTop_toBottomOf="@+id/statHeader" />
 
@@ -184,7 +183,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/statWaterValCur"
+        android:text="@string/value_water_current_text"
         app:layout_constraintEnd_toStartOf="@+id/dividerWater"
         app:layout_constraintTop_toBottomOf="@+id/statSunValCur" />
 
@@ -194,8 +193,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:backgroundTint="#FFC107"
-        android:contentDescription="@string/sunbutton"
-        android:text="@string/btnSun"
+        android:contentDescription="@string/button_sun_desc"
+        android:text="@string/button_sun_text"
         app:layout_constraintBottom_toTopOf="@+id/btnWater"
         app:layout_constraintEnd_toEndOf="@+id/btnWater"
         app:layout_constraintStart_toStartOf="@+id/btnWater" />
@@ -206,7 +205,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/divider"
+        android:text="@string/value_divider_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statHeader" />
 
@@ -216,8 +215,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:backgroundTint="#2196F3"
-        android:contentDescription="@string/waterbutton"
-        android:text="@string/btnWater"
+        android:contentDescription="@string/button_select_water_desc"
+        android:text="@string/button_water_text"
         app:layout_constraintBottom_toTopOf="@+id/btnLove"
         app:layout_constraintEnd_toEndOf="@+id/btnLove"
         app:layout_constraintStart_toStartOf="@+id/btnLove" />
@@ -230,8 +229,8 @@
         android:layout_marginEnd="96dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#E91E63"
-        android:contentDescription="@string/lovebutton"
-        android:text="@string/btnLove"
+        android:contentDescription="@string/button_love_desc"
+        android:text="@string/button_love_text"
         app:layout_constraintBottom_toTopOf="@+id/btnEvolve"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -243,7 +242,7 @@
         android:layout_height="48dp"
         android:layout_marginBottom="24dp"
         android:background="#00000000"
-        android:contentDescription="@string/button_evolve"
+        android:contentDescription="@string/button_evolve_desc"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_evolve_foreground"
         android:tint="#009688"
@@ -258,7 +257,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/pokemon_Level"
+        android:text="@string/pokemon_level_text"
         app:layout_constraintEnd_toEndOf="@+id/pokemonAvatar"
         app:layout_constraintStart_toStartOf="@+id/pokemonAvatar"
         app:layout_constraintTop_toBottomOf="@+id/pokemonAvatar" />

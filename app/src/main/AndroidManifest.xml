@@ -18,7 +18,6 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_choice"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

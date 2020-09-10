@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
                 if (pokemon.evolve()) {
                     drawDetails();
                     drawStatistics();
-                    game.setDifficulty(game.getDifficulty() + 1);
+                    game.setDifficulty(pokemon.getPokemonLevel());
                     toastMessage = "Evolution Successful!";
 
                 } else {
@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater inflater = this.getLayoutInflater();
         View dialogView = (inflater.inflate(R.layout.math_dialog, null));
         builder.setView(dialogView);
-        builder.setTitle(R.string.mathModalHeader);
+        builder.setTitle(R.string.header_math_modal_text);
         TextView constantTextView = (TextView) dialogView.findViewById(R.id.constantTextView);
         constantTextView.setText(game.getConstant());
         TextView operatorTextView = (TextView) dialogView.findViewById(R.id.operatorTextView);
@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
         TextView sumTextView = (TextView) dialogView.findViewById(R.id.sumTextView);
         sumTextView.setText(game.getSum());
         final EditText variableEditText = (EditText) dialogView.findViewById(R.id.variableEditText);
-        builder.setPositiveButton(R.string.submit, new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.button_solve_text, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 try {
@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(R.string.button_cancel_text, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
             }
