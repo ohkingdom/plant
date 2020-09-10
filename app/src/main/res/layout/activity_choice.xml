@@ -7,7 +7,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/header_choice_activity_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -20,78 +20,178 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/fireSelect"
-        android:layout_width="144dp"
-        android:layout_height="144dp"
-        android:layout_marginStart="16dp"
+        android:id="@+id/button_select_fire"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:contentDescription="@string/button_select_fire_desc"
         android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/fire" />
+        app:layout_constraintStart_toStartOf="@+id/header_choice_activity_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_choice_activity_text"
+        app:srcCompat="@drawable/type_fire" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/button_select_fire_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="@string/button_select_fire_text"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/fireSelect"
-        app:layout_constraintStart_toStartOf="@+id/fireSelect"
-        app:layout_constraintTop_toBottomOf="@+id/fireSelect" />
+        app:layout_constraintEnd_toEndOf="@+id/button_select_fire"
+        app:layout_constraintStart_toStartOf="@+id/button_select_fire"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_fire" />
 
     <ImageButton
-        android:id="@+id/grassSelect"
-        android:layout_width="144dp"
-        android:layout_height="144dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/button_select_grass"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/button_select_grass_desc"
         android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/grass" />
+        app:layout_constraintStart_toStartOf="@+id/button_select_fire"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_fire_text"
+        app:srcCompat="@drawable/type_grass" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/button_select_grass_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="@string/button_select_grass_text"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/grassSelect"
-        app:layout_constraintStart_toStartOf="@+id/grassSelect"
-        app:layout_constraintTop_toBottomOf="@+id/grassSelect" />
+        app:layout_constraintEnd_toEndOf="@+id/button_select_grass"
+        app:layout_constraintStart_toStartOf="@+id/button_select_grass"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_grass" />
 
     <ImageButton
-        android:id="@+id/waterSelect"
-        android:layout_width="144dp"
-        android:layout_height="144dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/button_select_water"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/button_select_water_desc"
         android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:srcCompat="@drawable/water" />
+        app:layout_constraintStart_toStartOf="@+id/button_select_grass"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_grass_text"
+        app:srcCompat="@drawable/type_water" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/button_select_water_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="@string/button_select_water_text"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/waterSelect"
-        app:layout_constraintStart_toStartOf="@+id/waterSelect"
-        app:layout_constraintTop_toBottomOf="@+id/waterSelect" />
+        app:layout_constraintEnd_toEndOf="@+id/button_select_water"
+        app:layout_constraintStart_toStartOf="@+id/button_select_water"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_water" />
+
+    <ImageButton
+        android:id="@+id/button_select_dragon"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/button_select_dragon_desc"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="@+id/button_select_water"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_water_text"
+        app:srcCompat="@drawable/type_dragon" />
+
+    <TextView
+        android:id="@+id/button_select_dragon_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_select_dragon_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/button_select_dragon"
+        app:layout_constraintStart_toStartOf="@+id/button_select_dragon"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_dragon" />
+
+    <ImageButton
+        android:id="@+id/button_select_electric"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/button_select_electric_desc"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="@+id/header_choice_activity_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_choice_activity_text"
+        app:srcCompat="@drawable/type_electric" />
+
+    <TextView
+        android:id="@+id/button_select_electric_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_select_electric_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/button_select_electric"
+        app:layout_constraintStart_toStartOf="@+id/button_select_electric"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_electric" />
+
+    <ImageButton
+        android:id="@+id/button_select_steel"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/button_select_steel_desc"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="@+id/button_select_electric"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_electric_text"
+        app:srcCompat="@drawable/type_steel" />
+
+    <TextView
+        android:id="@+id/button_select_steel_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_select_steel_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/button_select_steel"
+        app:layout_constraintStart_toStartOf="@+id/button_select_steel"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_steel" />
+
+    <ImageButton
+        android:id="@+id/button_select_psychic"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/button_select_psychic_desc"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="@+id/button_select_steel"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_steel_text"
+        app:srcCompat="@drawable/type_psychic" />
+
+    <TextView
+        android:id="@+id/button_select_psychic_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_select_psychic_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/button_select_psychic"
+        app:layout_constraintStart_toStartOf="@+id/button_select_psychic"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_psychic" />
+
+    <ImageButton
+        android:id="@+id/button_select_ghost"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/button_select_ghost_desc"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="@+id/button_select_psychic"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_psychic_text"
+        app:srcCompat="@drawable/type_ghost" />
+
+    <TextView
+        android:id="@+id/button_select_ghost_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_select_ghost_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/button_select_ghost"
+        app:layout_constraintStart_toStartOf="@+id/button_select_ghost"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_ghost" />
 </androidx.constraintlayout.widget.ConstraintLayout>

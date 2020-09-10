@@ -8,10 +8,11 @@ import java.util.Random;
 
 public class Pokemon {
 
-    private boolean testMode = false;
+    private boolean testMode = true;
 
     private String pokemonName;
-    private List<String> pokemonRealName;
+    private List<String> pokemonNameRef;
+    private List<Integer> pokemonSpriteRef;
     private Integer pokemonLevel;
     private String pokemonType;
     private Map<String, Integer> statValCur;
@@ -23,7 +24,7 @@ public class Pokemon {
 
     public Pokemon(String type, String name) {
         init(type, name);
-        setRealName();
+        setReferences();
         statGenerator();
     }
 
@@ -46,16 +47,39 @@ public class Pokemon {
         pokemonName = names.get(new Random().nextInt(names.size()));
     }
 
-    private void setRealName() {
+    private void setReferences() {
         switch (pokemonType) {
             case "grass" :
-                pokemonRealName = Arrays.asList("Bulbasaur", "Ivysaur", "Venusaur");
+                pokemonNameRef = Arrays.asList("Bulbasaur", "Ivysaur", "Venusaur");
+                pokemonSpriteRef = Arrays.asList(R.drawable.spr_5b_001, R.drawable.spr_5b_002, R.drawable.spr_5b_003_m);
                 break;
             case "water" :
-                pokemonRealName = Arrays.asList("Squirtle", "Wartortle", "Blastoise");
+                pokemonNameRef = Arrays.asList("Squirtle", "Wartortle", "Blastoise");
+                pokemonSpriteRef = Arrays.asList(R.drawable.spr_5b_007, R.drawable.spr_5b_008, R.drawable.spr_5b_009);
                 break;
             case "fire" :
-                pokemonRealName = Arrays.asList("Charmander", "Charmeleon", "Charizard");
+                pokemonNameRef = Arrays.asList("Charmander", "Charmeleon", "Charizard");
+                pokemonSpriteRef = Arrays.asList(R.drawable.spr_5b_004, R.drawable.spr_5b_005, R.drawable.spr_5b_006);
+                break;
+            case "electric" :
+                pokemonNameRef = Arrays.asList("Pichu", "Pikachu", "Raichu");
+                pokemonSpriteRef = Arrays.asList(R.drawable.spr_5b2_172, R.drawable.spr_5b2_025_f, R.drawable.spr_5b2_026_f);
+                break;
+            case "ghost" :
+                pokemonNameRef = Arrays.asList("Ghastly", "Haunter", "Gengar");
+                pokemonSpriteRef = Arrays.asList(R.drawable.spr_5b_092, R.drawable.spr_5b_093, R.drawable.spr_5b_094);
+                break;
+            case "psychic" :
+                pokemonNameRef = Arrays.asList("Abra", "Kadabra", "Alakazam");
+                pokemonSpriteRef = Arrays.asList(R.drawable.spr_5b_063, R.drawable.spr_5b_064_m, R.drawable.spr_5b_065_m);
+                break;
+            case "steel" :
+                pokemonNameRef = Arrays.asList("Beldum", "Metang", "Metagross");
+                pokemonSpriteRef = Arrays.asList(R.drawable.spr_5b_374, R.drawable.spr_5b_375, R.drawable.spr_5b_376);
+                break;
+            case "dragon" :
+                pokemonNameRef = Arrays.asList("Deino", "Zweilous", "Hydreigon");
+                pokemonSpriteRef = Arrays.asList(R.drawable.spr_5b_633, R.drawable.spr_5b_634, R.drawable.spr_5b_635);
                 break;
         }
     }
@@ -94,11 +118,15 @@ public class Pokemon {
     }
 
     public String getPokemonName() {
-        return pokemonName + " the " + pokemonRealName.get(pokemonLevel - 1);
+        return pokemonName + " the " + pokemonNameRef.get(pokemonLevel - 1);
     }
 
     public void setPokemonName(String name) {
         pokemonName = name;
+    }
+
+    public int getPokemonSprite() {
+        return pokemonSpriteRef.get(getPokemonLevel() - 1);
     }
 
     public int getPokemonLevel() {

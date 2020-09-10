@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/mathHeader"
+        android:id="@+id/value_math_modal_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -14,11 +14,11 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/constantTextView"
+        app:layout_constraintStart_toStartOf="@+id/value_constant_text"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/variableEditText"
+        android:id="@+id/value_variable_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -27,13 +27,13 @@
         android:inputType="text"
         android:textAlignment="center"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/equalityTextView"
-        app:layout_constraintStart_toEndOf="@+id/operatorTextView"
-        app:layout_constraintTop_toBottomOf="@+id/mathHeader"
+        app:layout_constraintEnd_toStartOf="@+id/value_equality_text"
+        app:layout_constraintStart_toEndOf="@+id/value_operator_text"
+        app:layout_constraintTop_toBottomOf="@+id/value_math_modal_text"
         android:importantForAutofill="no" />
 
     <TextView
-        android:id="@+id/constantTextView"
+        android:id="@+id/value_constant_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -42,13 +42,13 @@
         android:text="@string/value_constant_text"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/variableEditText"
-        app:layout_constraintEnd_toStartOf="@+id/operatorTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/value_variable_text"
+        app:layout_constraintEnd_toStartOf="@+id/value_operator_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/variableEditText" />
+        app:layout_constraintTop_toTopOf="@+id/value_variable_text" />
 
     <TextView
-        android:id="@+id/operatorTextView"
+        android:id="@+id/value_operator_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -57,13 +57,13 @@
         android:text="@string/value_operator_text"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/variableEditText"
-        app:layout_constraintEnd_toStartOf="@+id/variableEditText"
-        app:layout_constraintStart_toEndOf="@+id/constantTextView"
-        app:layout_constraintTop_toTopOf="@+id/variableEditText" />
+        app:layout_constraintBottom_toBottomOf="@+id/value_variable_text"
+        app:layout_constraintEnd_toStartOf="@+id/value_variable_text"
+        app:layout_constraintStart_toEndOf="@+id/value_constant_text"
+        app:layout_constraintTop_toTopOf="@+id/value_variable_text" />
 
     <TextView
-        android:id="@+id/equalityTextView"
+        android:id="@+id/value_equality_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -72,13 +72,13 @@
         android:text="@string/value_equality_text"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/variableEditText"
-        app:layout_constraintEnd_toStartOf="@+id/sumTextView"
-        app:layout_constraintStart_toEndOf="@+id/variableEditText"
-        app:layout_constraintTop_toTopOf="@+id/variableEditText" />
+        app:layout_constraintBottom_toBottomOf="@+id/value_variable_text"
+        app:layout_constraintEnd_toStartOf="@+id/value_sum_text"
+        app:layout_constraintStart_toEndOf="@+id/value_variable_text"
+        app:layout_constraintTop_toTopOf="@+id/value_variable_text" />
 
     <TextView
-        android:id="@+id/sumTextView"
+        android:id="@+id/value_sum_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -87,8 +87,8 @@
         android:text="@string/value_sum_text"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/variableEditText"
+        app:layout_constraintBottom_toBottomOf="@+id/value_variable_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/equalityTextView"
-        app:layout_constraintTop_toTopOf="@+id/variableEditText" />
+        app:layout_constraintStart_toEndOf="@+id/value_equality_text"
+        app:layout_constraintTop_toTopOf="@+id/value_variable_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>

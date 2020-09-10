@@ -3,13 +3,23 @@
     <string name="app_name">PokéSolve</string>
 
     <!--    Choice Activity-->
-    <string name="header_choice_activity_text">Choose Your Pokémon</string>
-    <string name="button_select_fire_text">Fire Type</string>
-    <string name="button_select_grass_text">Grass Type</string>
-    <string name="button_select_water_text">Water Type</string>
+    <string name="header_choice_activity_text">Choose Your Pokémon Type</string>
+    <string name="button_select_fire_text">Fire</string>
+    <string name="button_select_grass_text">Grass</string>
+    <string name="button_select_water_text">Water</string>
+    <string name="button_select_psychic_text">Psychic</string>
+    <string name="button_select_steel_text">Steel</string>
+    <string name="button_select_ghost_text">Ghost</string>
+    <string name="button_select_electric_text">Electric</string>
+    <string name="button_select_dragon_text">Dragon</string>
     <string name="button_select_fire_desc">FireButton</string>
     <string name="button_select_grass_desc">GrassButton</string>
     <string name="button_select_water_desc">WaterButton</string>
+    <string name="button_select_psychic_desc">PsychicButton</string>
+    <string name="button_select_steel_desc">SteelButton</string>
+    <string name="button_select_ghost_desc">GhostButton</string>
+    <string name="button_select_electric_desc">ElectricButton</string>
+    <string name="button_select_dragon_desc">DragonButton</string>
     <!--    > Name Modal Dialog-->
     <string name="header_name_modal_text">Name your Pokémon</string>
     <string name="field_name_modal_hint">Leave blank for default</string>

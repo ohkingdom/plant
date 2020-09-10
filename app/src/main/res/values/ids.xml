@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="header_choice_activity_text" type="id" />
+    <item name="button_select_fire" type="id" />
+    <item name="button_select_fire_text" type="id" />
+    <item name="button_select_grass" type="id" />
+    <item name="button_select_grass_text" type="id" />
+    <item name="button_select_water" type="id" />
+    <item name="button_select_water_text" type="id" />
+    <item name="button_select_dragon" type="id" />
+    <item name="button_select_electric" type="id" />
+    <item name="button_select_electric_text" type="id" />
+    <item name="button_select_steel" type="id" />
+    <item name="button_select_steel_text" type="id" />
+    <item name="button_select_psychic" type="id" />
+    <item name="button_select_psychic_text" type="id" />
+    <item name="button_select_ghost" type="id" />
+</resources>

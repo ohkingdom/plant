@@ -34,20 +34,19 @@ public class MathGame {
         switch (i) {
             case 0:
                 operator = "+";
-                sum = constant + variable;
+                sum = (constant = new Random().nextInt(50 + 1)) + (variable = new Random().nextInt(50 + 1));
                 break;
             case 1:
                 operator = "-";
-                sum = constant - variable;
-                break;
-            case 2:
-                operator = "x";
-                sum = constant * variable;
+                sum = (constant = new Random().nextInt(50 + 1)) - (variable = new Random().nextInt(50 + 1));
                 break;
             case 3:
-                operator = "x";
-                sum = (constant + 25) * (variable + 25);
+                operator = "+";
+                sum = (constant = new Random().nextInt(75 + 1)) + (variable = new Random().nextInt(75 + 1));
                 break;
+            case 4:
+                operator = "-";
+                sum = (constant = new Random().nextInt(75 + 1)) - (variable = new Random().nextInt(75 + 1));
         }
     }
 

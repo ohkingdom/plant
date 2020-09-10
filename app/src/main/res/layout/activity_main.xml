@@ -7,34 +7,34 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/statLoveValCur"
+        android:id="@+id/value_love_current_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/value_love_current_text"
-        app:layout_constraintEnd_toStartOf="@+id/dividerLove"
-        app:layout_constraintTop_toBottomOf="@+id/statWaterValCur" />
+        app:layout_constraintEnd_toStartOf="@+id/value_divider_lovetext"
+        app:layout_constraintTop_toBottomOf="@+id/value_water_current_text" />
 
     <TextView
-        android:id="@+id/dividerLove"
+        android:id="@+id/value_divider_lovetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="@string/value_divider_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dividerWater" />
+        app:layout_constraintTop_toBottomOf="@+id/value_divider_water_text" />
 
     <TextView
-        android:id="@+id/dividerWater"
+        android:id="@+id/value_divider_water_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="@string/value_divider_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dividerSun" />
+        app:layout_constraintTop_toBottomOf="@+id/value_divider_sun_text" />
 
     <ImageView
         android:id="@+id/pokemonAvatar"
@@ -45,12 +45,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pokemonName"
+        app:layout_constraintTop_toBottomOf="@+id/pokemon_name_text"
         app:srcCompat="@drawable/avatar_temp"
         tools:srcCompat="@drawable/avatar_temp" />
 
     <TextView
-        android:id="@+id/pokemonName"
+        android:id="@+id/pokemon_name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -61,7 +61,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/statHeader"
+        android:id="@+id/value_header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -69,40 +69,40 @@
         android:text="@string/value_header_text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pokemonLevel" />
+        app:layout_constraintTop_toBottomOf="@+id/pokemon_level_text" />
 
     <TextView
-        android:id="@+id/statSunHeader"
+        android:id="@+id/value_sun_header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="@string/value_sun_header_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/value_header_text" />
 
     <TextView
-        android:id="@+id/statWaterHeader"
+        android:id="@+id/value_water_header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="@string/value_water_header_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statSunHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/value_sun_header_text" />
 
     <TextView
-        android:id="@+id/statLoveHeader"
+        android:id="@+id/value_love_header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="@string/value_love_header_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statWaterHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/value_water_header_text" />
 
     <ProgressBar
-        android:id="@+id/progressBarSun"
+        android:id="@+id/progress_sun"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -111,118 +111,118 @@
         android:progress="0"
         app:layout_constraintEnd_toEndOf="@+id/pokemonAvatar"
         app:layout_constraintStart_toStartOf="@+id/pokemonAvatar"
-        app:layout_constraintTop_toBottomOf="@+id/statHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/value_header_text" />
 
     <ProgressBar
-        android:id="@+id/progressBarWater"
+        android:id="@+id/progress_water"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:max="5"
         android:progress="0"
-        app:layout_constraintEnd_toEndOf="@+id/progressBarSun"
-        app:layout_constraintStart_toStartOf="@+id/progressBarSun"
-        app:layout_constraintTop_toBottomOf="@+id/statSunHeader" />
+        app:layout_constraintEnd_toEndOf="@+id/progress_sun"
+        app:layout_constraintStart_toStartOf="@+id/progress_sun"
+        app:layout_constraintTop_toBottomOf="@+id/value_sun_header_text" />
 
     <ProgressBar
-        android:id="@+id/progressBarLove"
+        android:id="@+id/progress_love"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:max="5"
         android:progress="0"
-        app:layout_constraintEnd_toEndOf="@+id/progressBarWater"
-        app:layout_constraintStart_toStartOf="@+id/progressBarWater"
-        app:layout_constraintTop_toBottomOf="@+id/statWaterHeader" />
+        app:layout_constraintEnd_toEndOf="@+id/progress_water"
+        app:layout_constraintStart_toStartOf="@+id/progress_water"
+        app:layout_constraintTop_toBottomOf="@+id/value_water_header_text" />
 
     <TextView
-        android:id="@+id/statSunValMax"
+        android:id="@+id/value_sun_max_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/value_sun_max_text"
-        app:layout_constraintStart_toEndOf="@+id/dividerSun"
-        app:layout_constraintTop_toBottomOf="@+id/statHeader" />
+        app:layout_constraintStart_toEndOf="@+id/value_divider_sun_text"
+        app:layout_constraintTop_toBottomOf="@+id/value_header_text" />
 
     <TextView
-        android:id="@+id/statWaterValMax"
+        android:id="@+id/value_water_max_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/value_water_max_text"
-        app:layout_constraintStart_toEndOf="@+id/dividerWater"
-        app:layout_constraintTop_toBottomOf="@+id/statSunValMax" />
+        app:layout_constraintStart_toEndOf="@+id/value_divider_water_text"
+        app:layout_constraintTop_toBottomOf="@+id/value_sun_max_text" />
 
     <TextView
-        android:id="@+id/statLoveValMax"
+        android:id="@+id/value_love_max_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/value_love_max_text"
-        app:layout_constraintStart_toEndOf="@+id/dividerLove"
-        app:layout_constraintTop_toBottomOf="@+id/statWaterValMax" />
+        app:layout_constraintStart_toEndOf="@+id/value_divider_lovetext"
+        app:layout_constraintTop_toBottomOf="@+id/value_water_max_text" />
 
     <TextView
-        android:id="@+id/statSunValCur"
+        android:id="@+id/value_sun_current_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/value_sun_current_text"
-        app:layout_constraintEnd_toStartOf="@+id/dividerSun"
-        app:layout_constraintTop_toBottomOf="@+id/statHeader" />
+        app:layout_constraintEnd_toStartOf="@+id/value_divider_sun_text"
+        app:layout_constraintTop_toBottomOf="@+id/value_header_text" />
 
     <TextView
-        android:id="@+id/statWaterValCur"
+        android:id="@+id/value_water_current_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/value_water_current_text"
-        app:layout_constraintEnd_toStartOf="@+id/dividerWater"
-        app:layout_constraintTop_toBottomOf="@+id/statSunValCur" />
+        app:layout_constraintEnd_toStartOf="@+id/value_divider_water_text"
+        app:layout_constraintTop_toBottomOf="@+id/value_sun_current_text" />
 
     <Button
-        android:id="@+id/btnSun"
+        android:id="@+id/button_sun"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:backgroundTint="#FFC107"
         android:contentDescription="@string/button_sun_desc"
         android:text="@string/button_sun_text"
-        app:layout_constraintBottom_toTopOf="@+id/btnWater"
-        app:layout_constraintEnd_toEndOf="@+id/btnWater"
-        app:layout_constraintStart_toStartOf="@+id/btnWater" />
+        app:layout_constraintBottom_toTopOf="@+id/button_water"
+        app:layout_constraintEnd_toEndOf="@+id/button_water"
+        app:layout_constraintStart_toStartOf="@+id/button_water" />
 
     <TextView
-        android:id="@+id/dividerSun"
+        android:id="@+id/value_divider_sun_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="@string/value_divider_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/value_header_text" />
 
     <Button
-        android:id="@+id/btnWater"
+        android:id="@+id/button_water"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:backgroundTint="#2196F3"
         android:contentDescription="@string/button_select_water_desc"
         android:text="@string/button_water_text"
-        app:layout_constraintBottom_toTopOf="@+id/btnLove"
-        app:layout_constraintEnd_toEndOf="@+id/btnLove"
-        app:layout_constraintStart_toStartOf="@+id/btnLove" />
+        app:layout_constraintBottom_toTopOf="@+id/button_love"
+        app:layout_constraintEnd_toEndOf="@+id/button_love"
+        app:layout_constraintStart_toStartOf="@+id/button_love" />
 
     <Button
-        android:id="@+id/btnLove"
+        android:id="@+id/button_love"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
@@ -231,13 +231,13 @@
         android:backgroundTint="#E91E63"
         android:contentDescription="@string/button_love_desc"
         android:text="@string/button_love_text"
-        app:layout_constraintBottom_toTopOf="@+id/btnEvolve"
+        app:layout_constraintBottom_toTopOf="@+id/button_evolve"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/btnEvolve"
+        android:id="@+id/button_evolve"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginBottom="24dp"
@@ -253,7 +253,7 @@
         tools:srcCompat="@drawable/ic_evolve_foreground" />
 
     <TextView
-        android:id="@+id/pokemonLevel"
+        android:id="@+id/pokemon_level_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

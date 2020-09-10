@@ -21,9 +21,14 @@ public class ChoiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice);
 
-        ImageButton fireButton = findViewById(R.id.fireSelect);
-        ImageButton grassButton = findViewById(R.id.grassSelect);
-        ImageButton waterButton = findViewById(R.id.waterSelect);
+        ImageButton fireButton = findViewById(R.id.button_select_fire);
+        ImageButton grassButton = findViewById(R.id.button_select_grass);
+        ImageButton waterButton = findViewById(R.id.button_select_water);
+        ImageButton dragonButton = findViewById(R.id.button_select_dragon);
+        ImageButton electricButton = findViewById(R.id.button_select_electric);
+        ImageButton steelButton = findViewById(R.id.button_select_steel);
+        ImageButton psychicButton = findViewById(R.id.button_select_psychic);
+        ImageButton ghostButton = findViewById(R.id.button_select_ghost);
 
         fireButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +54,46 @@ public class ChoiceActivity extends AppCompatActivity {
             }
         });
 
+        dragonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                typeChoice = "dragon";
+                onCreateDialog(savedInstanceState).show();
+            }
+        });
+
+        electricButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                typeChoice = "electric";
+                onCreateDialog(savedInstanceState).show();
+            }
+        });
+
+        steelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                typeChoice = "steel";
+                onCreateDialog(savedInstanceState).show();
+            }
+        });
+
+        psychicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                typeChoice = "psychic";
+                onCreateDialog(savedInstanceState).show();
+            }
+        });
+
+        ghostButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                typeChoice = "ghost";
+                onCreateDialog(savedInstanceState).show();
+            }
+        });
+
     }
 
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -57,7 +102,7 @@ public class ChoiceActivity extends AppCompatActivity {
         View dialogView = (inflater.inflate(R.layout.name_dialog, null));
         builder.setView(dialogView);
         builder.setTitle(R.string.header_name_modal_text);
-        final EditText nameInput = (EditText) dialogView.findViewById(R.id.nameField);
+        final EditText nameInput = (EditText) dialogView.findViewById(R.id.field_name_modal_text);
         builder.setPositiveButton(R.string.button_submit_text, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

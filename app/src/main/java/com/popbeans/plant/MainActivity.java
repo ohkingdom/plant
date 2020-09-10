@@ -23,25 +23,24 @@ import com.github.penfeizhou.animation.loader.ResourceStreamLoader;
 public class MainActivity extends AppCompatActivity {
 
     private Pokemon pokemon;
-    private TextView pokemonName;
-    private ImageView pokemonSprite;
-    int avatarDraw = R.drawable.spr_5b_151;
-    private TextView pokemonLevel;
+    private TextView pokemon_name_text;
+    private ImageView pokemon_sprite;
+    private TextView pokemon_level_text;
     private String activeButtonContext;
 
     private MathGame game;
 
-    private TextView statSunValCur;
-    private TextView statSunValMax;
-    private ProgressBar progressBarSun;
+    private TextView value_sun_current_text;
+    private TextView value_sun_max_text;
+    private ProgressBar progress_sun;
 
-    private TextView statWaterValCur;
-    private TextView statWaterValMax;
-    private ProgressBar progressBarWater;
+    private TextView value_water_current_text;
+    private TextView value_water_max_text;
+    private ProgressBar progress_water;
 
-    private TextView statLoveValCur;
-    private TextView statLoveValMax;
-    private ProgressBar progressBarLove;
+    private TextView value_love_current_text;
+    private TextView value_love_max_text;
+    private ProgressBar progress_love;
 
     // Call to redraw UI elements
 
@@ -49,68 +48,31 @@ public class MainActivity extends AppCompatActivity {
     public void drawDetails() {
 
         // Draw Avatar and Details
-
-        switch (pokemon.getPokemonLevel()) {
-            case 1 :
-                if (pokemon.getPokemonType().equals("fire")) {
-                    avatarDraw = R.drawable.spr_5b_004;
-                }
-                if (pokemon.getPokemonType().equals("grass")) {
-                    avatarDraw = R.drawable.spr_5b_001;
-                }
-                if (pokemon.getPokemonType().equals("water")) {
-                    avatarDraw = R.drawable.spr_5b_007;
-                }
-                break;
-            case 2 :
-                if (pokemon.getPokemonType().equals("fire")) {
-                    avatarDraw = R.drawable.spr_5b_005;
-                }
-                if (pokemon.getPokemonType().equals("grass")) {
-                    avatarDraw = R.drawable.spr_5b_002;
-                }
-                if (pokemon.getPokemonType().equals("water")) {
-                    avatarDraw = R.drawable.spr_5b_008;
-                }
-                break;
-            case 3 :
-                if (pokemon.getPokemonType().equals("fire")) {
-                    avatarDraw = R.drawable.spr_5b_006;
-                }
-                if (pokemon.getPokemonType().equals("grass")) {
-                    avatarDraw = R.drawable.spr_5b_003_m;
-                }
-                if (pokemon.getPokemonType().equals("water")) {
-                    avatarDraw = R.drawable.spr_5b_009;
-                }
-                break;
-        }
-        ResourceStreamLoader resourceLoader = new ResourceStreamLoader(MainActivity.this, avatarDraw);
+        ResourceStreamLoader resourceLoader = new ResourceStreamLoader(MainActivity.this, pokemon.getPokemonSprite());
         APNGDrawable apngDrawable = new APNGDrawable((resourceLoader));
-        pokemonSprite.setImageDrawable(apngDrawable);
-
-        pokemonName.setText(pokemon.getPokemonName());
-        pokemonLevel.setText("Level. " + pokemon.getPokemonLevel());
+        pokemon_sprite.setImageDrawable(apngDrawable);
+        pokemon_name_text.setText(pokemon.getPokemonName());
+        pokemon_level_text.setText("Level. " + pokemon.getPokemonLevel());
     }
 
     @SuppressLint("SetTextI18n")
     public void drawStatistics() {
 
         // Draw Statistic Values
-        statSunValCur.setText(Integer.toString(pokemon.getValCur("sun")));
-        statSunValMax.setText(Integer.toString(pokemon.getValMax("sun")));
-        statWaterValCur.setText(Integer.toString(pokemon.getValCur("water")));
-        statWaterValMax.setText(Integer.toString(pokemon.getValMax("water")));
-        statLoveValCur.setText(Integer.toString(pokemon.getValCur("love")));
-        statLoveValMax.setText(Integer.toString(pokemon.getValMax("love")));
+        value_sun_current_text.setText(Integer.toString(pokemon.getValCur("sun")));
+        value_sun_max_text.setText(Integer.toString(pokemon.getValMax("sun")));
+        value_water_current_text.setText(Integer.toString(pokemon.getValCur("water")));
+        value_water_max_text.setText(Integer.toString(pokemon.getValMax("water")));
+        value_love_current_text.setText(Integer.toString(pokemon.getValCur("love")));
+        value_love_max_text.setText(Integer.toString(pokemon.getValMax("love")));
 
         // Draw Progress Bars
-        progressBarSun.setProgress(pokemon.getValCur("sun"));
-        progressBarSun.setMax(pokemon.getValMax("sun"));
-        progressBarWater.setProgress(pokemon.getValCur("water"));
-        progressBarWater.setMax(pokemon.getValMax("water"));
-        progressBarLove.setProgress(pokemon.getValCur("love"));
-        progressBarLove.setMax(pokemon.getValMax("love"));
+        progress_sun.setProgress(pokemon.getValCur("sun"));
+        progress_sun.setMax(pokemon.getValMax("sun"));
+        progress_water.setProgress(pokemon.getValCur("water"));
+        progress_water.setMax(pokemon.getValMax("water"));
+        progress_love.setProgress(pokemon.getValCur("love"));
+        progress_love.setMax(pokemon.getValMax("love"));
     }
 
     @Override
@@ -126,34 +88,34 @@ public class MainActivity extends AppCompatActivity {
         }
 
         pokemon = new Pokemon(extras.getString("Type"), extras.getString("Name"));
-        pokemonName = findViewById(R.id.pokemonName);
-        pokemonName.setText(pokemon.getPokemonName());
-        pokemonSprite = findViewById(R.id.pokemonAvatar);
-        pokemonLevel = findViewById(R.id.pokemonLevel);
+        pokemon_name_text = findViewById(R.id.pokemon_name_text);
+        pokemon_name_text.setText(pokemon.getPokemonName());
+        pokemon_sprite = findViewById(R.id.pokemonAvatar);
+        pokemon_level_text = findViewById(R.id.pokemon_level_text);
 
         game = new MathGame();
         game.setDifficulty(1);
 
-        statSunValCur = findViewById(R.id.statSunValCur);
-        statSunValMax = findViewById(R.id.statSunValMax);
-        statWaterValCur = findViewById(R.id.statWaterValCur);
-        statWaterValMax = findViewById(R.id.statWaterValMax);
-        statLoveValCur = findViewById(R.id.statLoveValCur);
-        statLoveValMax = findViewById(R.id.statLoveValMax);
+        value_sun_current_text = findViewById(R.id.value_sun_current_text);
+        value_sun_max_text = findViewById(R.id.value_sun_max_text);
+        value_water_current_text = findViewById(R.id.value_water_current_text);
+        value_water_max_text = findViewById(R.id.value_water_max_text);
+        value_love_current_text = findViewById(R.id.value_love_current_text);
+        value_love_max_text = findViewById(R.id.value_love_max_text);
 
-        progressBarSun = findViewById(R.id.progressBarSun);
-        progressBarWater = findViewById(R.id.progressBarWater);
-        progressBarLove = findViewById(R.id.progressBarLove);
+        progress_sun = findViewById(R.id.progress_sun);
+        progress_water = findViewById(R.id.progress_water);
+        progress_love = findViewById(R.id.progress_love);
 
-        Button btnSun = findViewById(R.id.btnSun);
-        Button btnWater = findViewById(R.id.btnWater);
-        Button btnLove = findViewById(R.id.btnLove);
-        ImageButton btnEvolve = findViewById(R.id.btnEvolve);
+        Button button_sun = findViewById(R.id.button_sun);
+        Button button_water = findViewById(R.id.button_water);
+        Button button_love = findViewById(R.id.button_love);
+        ImageButton button_evolve = findViewById(R.id.button_evolve);
 
         drawDetails();
         drawStatistics();
 
-        btnSun.setOnClickListener(new View.OnClickListener() {
+        button_sun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 activeButtonContext = "sun";
@@ -161,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnWater.setOnClickListener(new View.OnClickListener() {
+        button_water.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 activeButtonContext = "water";
@@ -169,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnLove.setOnClickListener(new View.OnClickListener() {
+        button_love.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 activeButtonContext = "love";
@@ -177,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnEvolve.setOnClickListener(new View.OnClickListener() {
+        button_evolve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String toastMessage;
@@ -203,13 +165,13 @@ public class MainActivity extends AppCompatActivity {
         View dialogView = (inflater.inflate(R.layout.math_dialog, null));
         builder.setView(dialogView);
         builder.setTitle(R.string.header_math_modal_text);
-        TextView constantTextView = (TextView) dialogView.findViewById(R.id.constantTextView);
+        TextView constantTextView = (TextView) dialogView.findViewById(R.id.value_constant_text);
         constantTextView.setText(game.getConstant());
-        TextView operatorTextView = (TextView) dialogView.findViewById(R.id.operatorTextView);
+        TextView operatorTextView = (TextView) dialogView.findViewById(R.id.value_operator_text);
         operatorTextView.setText(game.getOperator());
-        TextView sumTextView = (TextView) dialogView.findViewById(R.id.sumTextView);
+        TextView sumTextView = (TextView) dialogView.findViewById(R.id.value_sum_text);
         sumTextView.setText(game.getSum());
-        final EditText variableEditText = (EditText) dialogView.findViewById(R.id.variableEditText);
+        final EditText variableEditText = (EditText) dialogView.findViewById(R.id.value_variable_text);
         builder.setPositiveButton(R.string.button_solve_text, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
