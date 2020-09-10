@@ -1,5 +1,7 @@
 # PokéSolve
 
+![Application video](https://media.giphy.com/media/TigN4dcJYNwduwplpu/giphy.gif)
+
 Practicing Android app development and testing!
 
 Choose your starter Pokémon, give it a name, and then solve increasingly difficult math problems in order to evolve it!
@@ -10,9 +12,6 @@ Choose your starter Pokémon, give it a name, and then solve increasingly diffic
 - [ ] Implement polymorphisms, generify classes and refactor methods
 - [ ] Add division math challenges (will have to change from int to handle this)
 
-![Application video](showcase_0.mp4)
 ![Application image](showcase_1.png)
-![Application image](showcase_2.png)
-![Application image](showcase_3.png)
 ![Application image](showcase_4.png)
 ![Application image](showcase_5.png)
