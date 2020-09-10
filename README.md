@@ -1,6 +1,6 @@
 # PokéSolve
 
-![Application video](https://media.giphy.com/media/YqKH3liEIXHBWDglYH/giphy.gif)
+![Application video](https://media.giphy.com/media/MCXcBlkO5HGY61Mv5x/giphy.gif)
 
 Practicing Android app development and testing!
 
