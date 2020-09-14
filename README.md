@@ -35,6 +35,7 @@ Snapshot of the code is at the bottom of this readme.
 - [ ] Add multiplication and division math challenges (will have to change from int to handle this)
 - [ ] Implement the use of Fragments, so I can add a settings page, allow the changing of nicknames, etc.
 - [ ] Learn and understand how to use the Android Activity Lifecycle
+- [ ] Eventually explore landscape layouts, and how to better set view constraints
 
 ![Application image](screenshot_1.png)
 ![Application image](screenshot_2.png)
