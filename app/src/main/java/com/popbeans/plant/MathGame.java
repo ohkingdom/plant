@@ -23,9 +23,6 @@ public class MathGame {
     }
 
     public void request() {
-        // Generate Random Values
-//        constant = new Random().nextInt(50 + 1);
-//        variable = new Random().nextInt(50 + 1);
         // Use Difficulty to Select Equation Difficulty
         int i = new Random().nextInt(2);
         if (difficulty > 1) {
@@ -34,19 +31,19 @@ public class MathGame {
         switch (i) {
             case 0:
                 operator = "+";
-                sum = (constant = new Random().nextInt(25 + 1)) + (variable = new Random().nextInt(25 + 1));
+                sum = (constant = new Random().nextInt(25) + 1) + (variable = new Random().nextInt(25) + 1);
                 break;
             case 1:
                 operator = "-";
-                sum = (constant = new Random().nextInt(25 + 1)) - (variable = new Random().nextInt(25 + 1));
+                sum = (constant = new Random().nextInt(25) + 1) - (variable = new Random().nextInt(25) + 1);
                 break;
             case 3:
                 operator = "+";
-                sum = (constant = new Random().nextInt(50 + 1)) + (variable = new Random().nextInt(50 + 1));
+                sum = (constant = new Random().nextInt(50) + 1) + (variable = new Random().nextInt(50) + 1);
                 break;
             case 4:
                 operator = "-";
-                sum = (constant = new Random().nextInt(75 + 1)) - (variable = new Random().nextInt(75 + 1));
+                sum = (constant = new Random().nextInt(75) + 1) - (variable = new Random().nextInt(75) + 1);
         }
     }
 
