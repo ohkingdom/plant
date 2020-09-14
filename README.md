@@ -15,7 +15,7 @@ However after refactoring the Pokemon class, this approach would've undone a lot
 I was honestly addicted to them, which I don't really fault myself for. As this is my first Android application, there has been so much learning and trial and error. My classes, methods, and implementations started out really messy just to cobble something together. However I've spent a lot of time learning how to refactor, and implement polymorphism into the constructing of my classes. This has made it a lot easier to add additional Pokemon, instead of using a switch statement to both construct the object and then actually populate its unique data (such as sprites, names).
 
 <h3>Animated PNGs for Sprites</h3>
-penfeizhou's APNG library was amazing for this, and it's my first time using a 3rd party library. So easy!
+penfeizhou's APNG library was amazing for this. So easy!
 This added a lot more character to what was essentially a static screen. I also implemented an ImageView ontop of the sprite to animate effects when the Pokemon evolved.
 
 <h3>Automated Testing</h3>
