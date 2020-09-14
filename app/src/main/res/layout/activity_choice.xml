@@ -194,4 +194,15 @@
         app:layout_constraintEnd_toEndOf="@+id/button_select_ghost"
         app:layout_constraintStart_toStartOf="@+id/button_select_ghost"
         app:layout_constraintTop_toBottomOf="@+id/button_select_ghost" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_test_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/switch_test_mode_desc"
+        android:text="@string/switch_test_mode_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

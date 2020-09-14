@@ -5,18 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/value_math_modal_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/value_math_modal_text"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/value_constant_text"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/value_variable_text"
         android:layout_width="wrap_content"
@@ -24,13 +12,13 @@
         android:layout_marginTop="16dp"
         android:contentDescription="@string/value_variable_desc"
         android:hint="@string/value_variable_hint"
+        android:importantForAutofill="no"
         android:inputType="text"
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/value_equality_text"
         app:layout_constraintStart_toEndOf="@+id/value_operator_text"
-        app:layout_constraintTop_toBottomOf="@+id/value_math_modal_text"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/value_constant_text"

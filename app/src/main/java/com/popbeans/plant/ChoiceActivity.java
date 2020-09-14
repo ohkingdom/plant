@@ -11,10 +11,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 public class ChoiceActivity extends AppCompatActivity {
 
-    private String typeChoice;
+    private Intent intent;
+    private Pokemon pokemon;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -30,10 +32,14 @@ public class ChoiceActivity extends AppCompatActivity {
         ImageButton psychicButton = findViewById(R.id.button_select_psychic);
         ImageButton ghostButton = findViewById(R.id.button_select_ghost);
 
+        SwitchCompat testModeSwitch = findViewById(R.id.switch_test_mode);
+
+        intent = new Intent(ChoiceActivity.this, MainActivity.class);
+
         fireButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                typeChoice = "fire";
+                pokemon = new Charmander();
                 onCreateDialog(savedInstanceState).show();
             }
         });
@@ -41,7 +47,7 @@ public class ChoiceActivity extends AppCompatActivity {
         grassButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                typeChoice = "grass";
+                pokemon = new Bulbasaur();
                 onCreateDialog(savedInstanceState).show();
             }
         });
@@ -49,7 +55,7 @@ public class ChoiceActivity extends AppCompatActivity {
         waterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                typeChoice = "water";
+                pokemon = new Squirtle();
                 onCreateDialog(savedInstanceState).show();
             }
         });
@@ -57,7 +63,7 @@ public class ChoiceActivity extends AppCompatActivity {
         dragonButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                typeChoice = "dragon";
+                pokemon = new Deino();
                 onCreateDialog(savedInstanceState).show();
             }
         });
@@ -65,7 +71,7 @@ public class ChoiceActivity extends AppCompatActivity {
         electricButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                typeChoice = "electric";
+                pokemon = new Pichu();
                 onCreateDialog(savedInstanceState).show();
             }
         });
@@ -73,7 +79,7 @@ public class ChoiceActivity extends AppCompatActivity {
         steelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                typeChoice = "steel";
+                pokemon = new Beldum();
                 onCreateDialog(savedInstanceState).show();
             }
         });
@@ -81,7 +87,7 @@ public class ChoiceActivity extends AppCompatActivity {
         psychicButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                typeChoice = "psychic";
+                pokemon = new Abra();
                 onCreateDialog(savedInstanceState).show();
             }
         });
@@ -89,8 +95,19 @@ public class ChoiceActivity extends AppCompatActivity {
         ghostButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                typeChoice = "ghost";
+                pokemon = new Ghastly();
                 onCreateDialog(savedInstanceState).show();
+            }
+        });
+
+        testModeSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (testModeSwitch.isChecked()) {
+                    intent.putExtra("TestMode", true);
+                } else {
+                    intent.putExtra("TestMode", false);
+                }
             }
         });
 
@@ -106,9 +123,8 @@ public class ChoiceActivity extends AppCompatActivity {
         builder.setPositiveButton(R.string.button_submit_text, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Intent intent = new Intent(ChoiceActivity.this, MainActivity.class);
                 intent.putExtra("Name", nameInput.getText().toString());
-                intent.putExtra("Type", typeChoice);
+                intent.putExtra("Pokemon", pokemon);
                 startActivity(intent);
             }
         });

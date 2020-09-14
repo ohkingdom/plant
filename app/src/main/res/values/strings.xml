@@ -20,15 +20,20 @@
     <string name="button_select_ghost_desc">GhostButton</string>
     <string name="button_select_electric_desc">ElectricButton</string>
     <string name="button_select_dragon_desc">DragonButton</string>
+    <string name="switch_test_mode_text">Test Mode</string>
+    <string name="switch_test_mode_desc">TestModeSwitch</string>
+
     <!--    > Name Modal Dialog-->
     <string name="header_name_modal_text">Name your Pokémon</string>
     <string name="field_name_modal_hint">Leave blank for default</string>
+    <string name="field_name_modal_desc">NameInputField</string>
     <string name="button_submit_text">Submit</string>
     <string name="button_submit_desc">SubmitButton</string>
 
     <!--    Main Activity-->
     <string name="pokemon_name_text">Pusheen</string>
     <string name="pokemon_sprite_desc">Pokémon Sprite</string>
+    <string name="pokemon_sprite_overlay_desc">Overlay for Effects</string>
     <string name="pokemon_level_text">Level. 0</string>
     <string name="value_header_text">Statistics</string>
     <string name="value_sun_header_text">Sun</string>
@@ -36,11 +41,17 @@
     <string name="value_love_header_text">Love</string>
     <string name="value_divider_text">/</string>
     <string name="value_sun_current_text">0</string>
-    <string name="value_sun_max_text">0</string>
     <string name="value_water_current_text">0</string>
-    <string name="value_water_max_text">0</string>
     <string name="value_love_current_text">0</string>
+    <string name="value_sun_max_text">0</string>
+    <string name="value_water_max_text">0</string>
     <string name="value_love_max_text">0</string>
+    <string name="value_sun_current_desc">ValueSunCurrent</string>
+    <string name="value_water_current_desc">ValueWaterCurrent</string>
+    <string name="value_love_current_desc">ValueLoveCurrent</string>
+    <string name="value_sun_max_desc">ValueSunMaximum</string>
+    <string name="value_water_max_desc">ValueWaterMaximum</string>
+    <string name="value_love_max_desc">ValueLoveMaximum</string>
     <string name="button_sun_text">Press for Sunshine</string>
     <string name="button_water_text">Press for Water</string>
     <string name="button_love_text">Press for Love</string>
@@ -50,10 +61,11 @@
     <string name="button_love_desc">LoveButton</string>
 
     <!--    > Math Modal Dialog-->
-    <string name="header_math_modal_text">Math Question</string>
+    <string name="header_math_modal_text">Solve the Following Equation</string>
     <string name="button_solve_text">Solve</string>
     <string name="button_cancel_text">Cancel</string>
-    <string name="value_math_modal_text">Solve the following equation</string>
+    <string name="button_solve_desc">SolveButton</string>
+    <string name="button_cancel_desc">CancelButton</string>
     <string name="value_constant_text">50</string>
     <string name="value_operator_text">+</string>
     <string name="value_variable_hint">\u003F</string>
