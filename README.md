@@ -20,8 +20,10 @@ This added a lot more character to what was essentially a static screen. I also 
 
 <h3>Automated Testing</h3>
 I've been using Appium and TestNG for automated testing of this project on Amazon Device Farm. This was honestly a nightmare at the start, as dealing with movement between Activities was really difficult. I especially faced challenges with the Alert Modal Dialog pop-ups. After implementing WebDriverWait and the shamefully bruteforce sleep(), I overcame a lot of the missing element errors.
+
 After a lot of hair-pulling, I also found Amazon Device Farm doesn't play nice with the debug apk produced by Android Studio when installing the application on the virtual emulator. I had to build with Gradle directly from the commandline to overcome this.
 I also spent 3+ days trying to force Maven to work alongside Gradle to build the test suite with dependencies. Eventually I threw in the towel, and now write and build the automation tests in a seperate project with IntelliJ. I believe this is mostly Android Studio at fault.
+
 It's also really fun watching the automation suite solve the math challenges, and absolutely puts me to shame.
 Snapshot of the code is at the bottom of this readme.
 
