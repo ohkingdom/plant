@@ -32,6 +32,7 @@ Snapshot of the code is at the bottom of this readme.
 - [x] Refactor all View IDs
 - [x] Implement polymorphism (removing a large number of switch statements), generify classes and refactor methods
 - [ ] Remove the majority of the hard sleeps implemented in the automation script
+- [ ] Shift to POM for my automation classes, investigate using BDD
 - [ ] Add multiplication and division math challenges (will have to change from int to handle this)
 - [ ] Implement the use of Fragments, so I can add a settings page, allow the changing of nicknames, etc.
 - [ ] Learn and understand how to use the Android Activity Lifecycle
