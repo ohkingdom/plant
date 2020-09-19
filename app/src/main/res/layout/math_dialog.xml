@@ -13,7 +13,7 @@
         android:contentDescription="@string/value_variable_desc"
         android:hint="@string/value_variable_hint"
         android:importantForAutofill="no"
-        android:inputType="text"
+        android:inputType="number"
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/value_equality_text"
