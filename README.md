@@ -42,4 +42,4 @@ Snapshot of the code is at the bottom of this readme.
 ![Application image](screenshot_2.png)
 ![Application image](screenshot_3.png)
 
-Automation Code Snippet: https://pastebin.pl/view/55c95d10
+Automation Code Snippet: https://github.com/ohkingdom/pokeSolveTests/blob/master/src/test/java/tests/ApplicationTestSuite.java
